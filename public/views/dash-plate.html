@@ -30,8 +30,9 @@
             </div>
         </md-toolbar>
 
-        <div layout="row" layout-align="center center" style="margin-top:100px">
-            <div flex="10">
+
+        <div layout="row" layout-sm="column" layout-align="start center" style="margin-left: 100px; margin-top:100px; margin-bottom:40px">
+            <div flex="10" >
                 A2500
             </div>
             <div flex="10">
@@ -39,8 +40,17 @@
             </div>
         </div>
 
-        <div layout="row" layout-align="center center" style="margin-top:100px">
-            <div id="container" style="height: 300px"></div>
+        <div layout="row" layout-align="center center" >
+            <div id="container" style="height: 450px; width:90%"></div>
+        </div>
+
+
+        <div layout="row"   layout-align="center center" style="margin-top:100px;margin-left:20px">
+                <md-button class="md-raised md-primary" style="background-color: #0086b3"   ng-click="openConfirmationDialog($event,'buy')"> Buy</md-button>
+                <md-button class="md-raised md-primary" style="background-color: #0086b3"   ng-click="openConfirmationDialog($event,'sell')">Sell</md-button>
+                <md-button class="md-raised md-primary" style="background-color: #0086b3"> <a href="https://twitter.com/share" style="color:rgba(255,255,255,0.87)">Tweet</a>
+                </md-button>
+
         </div>
 
     </md-content>
