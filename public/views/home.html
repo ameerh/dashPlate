@@ -31,27 +31,45 @@
 
 		</md-toolbar>
 
-        <div layout="row" layout-align="center end">
-            <div style="width:30%; margin-top:100px">
-                <form layout="column" flex >
+        <div layout="row" layout-align="center end" layout-fill>
+            <img src="../images/dashplate-bg.png" class="bg" alt="image you want in background">
+            <div style="width:30%; margin-top:100px" style="background-color:white !important;">
+                <form name="form" layout="column" flex>
                     <md-input-container>
                         <label class="left-margin">Plate Number</label>
                         <input name="numberPlate" type="text" ng-model="numberPlate" required>
                     </md-input-container>
 
                     <md-input-container>
-                        <label>Emirate</label>
-                        <input name="emirate" type="text" ng-model="emirate" required>
+                        <md-select ng-model="emirate" placeholder="State" required>
+                            <md-option value="Dubai">Dubai</md-option>
+                        </md-select>
                     </md-input-container>
 
                     <md-input-container>
                         <label>Email</label>
-                        <input name="email" type="text" ng-model="email" required>
+                        <input name="email" type="email" ng-model="email" required>
                     </md-input-container>
+
+
+                    <div ng-show="form.numberPlate.$touched" class="error-message">
+                        <div ng-show="form.numberPlate.$error.required">First name is required</div>
+                    </div>
+
+                    <div ng-show="form.emirate.$touched" class="error-message">
+                        <div ng-show="form.emirate.$error.required">Last name is required</div>
+                    </div>
+
+
+                    <div ng-show="form.email.$touched" class="error-message">
+                        <div ng-show="form.email.$error.email">Invalid email</div>
+                        <div ng-show="form.email.$error.required">Email is required</div>
+                    </div>
+
 
                     <div layout="row" layout-align="end end">
                         <div flex="33">
-                            <md-button class="md-raised md-primary" style="background-color:#ffed3e" ng-click="submitDetails()">Price It</md-button>
+                            <md-button class="md-raised md-primary" style="background-color:#ffed3e" ng-disabled="!form.$valid" ng-click="submitDetails()">Price It</md-button>
                         </div>
 
                     </div>
@@ -64,13 +82,22 @@
 	</md-content>
 </section>
 
+
 <style>
-    body{
-        background:url('../images/dashplate-bg.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+
+    .bg {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 </style>
 
