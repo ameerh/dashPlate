@@ -25,7 +25,7 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
 			},
 			series: [{
 				data: [23,45,12,89,123,12,5],
-                color: "#ED8B29"
+                color: "#C57322"
 			}]
 
 		});
@@ -68,7 +68,7 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
 			controller: confirmationController,
 			templateUrl: '/views/buy-sell-dialog.html',
 			locals:{
-				"type": type
+				type: type
 			},
 			targetEvent: ev
 		})

@@ -2,7 +2,7 @@
 <section layout="row" flex >
 
     <md-content flex style="max-height : 700px;">
-        <md-toolbar layout="row" layout-align="start center" class="toolbar" style="background-color: white">
+        <md-toolbar layout="row" layout-align="start center" class="toolbar" style="background-color: white; border-bottom: 1px solid rgba(105,105,105,0.17);">
 
             <div flex="10">
                 <img src="../images/dash-logo.png" style="max-width:50px; max-height:50px">
@@ -31,7 +31,7 @@
         </md-toolbar>
 
 
-        <div layout="row" layout-sm="column" layout-align="start center" style="margin-left: 100px; margin-top:100px; margin-bottom:40px">
+        <div layout="row" layout-sm="column" layout-align="start center" style="margin-left: 100px; margin-top:70px; margin-bottom:40px">
             <div flex="10" >
                 A2500
             </div>
@@ -41,17 +41,29 @@
         </div>
 
         <div layout="row" layout-align="center center" >
-            <div id="container" style="height: 450px; width:90%"></div>
+            <div id="container" style="height: 350px; width:90%"></div>
         </div>
 
 
-        <div layout="row"   layout-align="center center" style="margin-top:100px;margin-left:20px">
+        <div layout="row"    style="margin-top:20px; margin-left:100px">
+
+            <div flex="10">
                 <md-button class="md-raised md-primary" style="background-color: #0086b3"   ng-click="openConfirmationDialog($event,'buy')"> Buy</md-button>
+            </div>
+            <div flex="10">
                 <md-button class="md-raised md-primary" style="background-color: #0086b3"   ng-click="openConfirmationDialog($event,'sell')">Sell</md-button>
-                <md-button class="md-raised md-primary" style="background-color: #0086b3"> <a href="https://twitter.com/share" style="color:rgba(255,255,255,0.87)">Tweet</a>
-                </md-button>
+            </div>
+
+            <div flex="65">
+            </div>
+
+            <div flex="10">
+                <md-button class="md-raised md-primary" style="background-color: #0086b3"> <a href="https://twitter.com/share" style="color:rgba(255,255,255,0.87)">Tweet</a></md-button>
+            </div>
+
 
         </div>
+
 
     </md-content>
 </section>
