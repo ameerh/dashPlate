@@ -2,44 +2,89 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 	<base href="/">
 
-	<title>Starter Node and Angular</title>
+	<title>DashPlate</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="libs/angular-ui-tree/dist/angular-ui-tree.min.css">
 
-	<!-- JS -->
-	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
+
+    <!-- JS -->
+
+
+    <script type='text/javascript' src='libs/jquery/dist/jquery.min.js'></script>
+
+    <script type='text/javascript' src='libs/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='libs/angular/angular.min.js'></script>
+
+    <script src="libs/angular/angular.min.js"></script>
+
+    <!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
+    <script src="libs/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="libs/ng-file-upload/ng-file-upload.min.js"></script>
+
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-animate/angular-animate.min.js"></script>
+    <script src="libs/angular-aria/angular-aria.min.js"></script>
+    <script src="libs/angular-material/angular-material.min.js"></script>
+    <script type="text/javascript" src="libs/angular-ui-tree/dist/angular-ui-tree.js"></script>
+
+    <script type="text/javascript" src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="libs/tv4/tv4.js"></script>
+    <script type="text/javascript" src="libs/objectpath/lib/ObjectPath.js"></script>
+    <script type="text/javascript" src="libs/angular-schema-form/dist/schema-form.min.js"></script>
+    <script type="text/javascript" src="libs/angular-schema-form/dist/bootstrap-decorator.min.js"></script>
+    <!--<script type="text/javascript" src="libs/angular-schema-form-datepicker/bootstrap-datepicker.min.js"></script>-->
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="libs/lodash/lodash.min.js"></script>
+    <script src="libs/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+    <script src="libs/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
 	<script src="js/controllers/MainCtrl.js"></script>
-	<script src="js/controllers/NerdCtrl.js"></script>
-	<script src="js/services/NerdService.js"></script>
-	<script src="js/controllers/GeekCtrl.js"></script>
-	<script src="js/services/GeekService.js"></script>
+	<script src="js/controllers/DashPlateCtrl.js"></script>
+	<script src="js/services/DashPlateService.js"></script>
 	<script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
+
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
-<div class="container">
-	
-	<!-- HEADER -->
-	<nav class="navbar navbar-inverse">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Stencil: Node and Angular</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a href="/nerds">Nerds</a></li>
-			<li><a href="/geeks">Geeks</a></li>
-		</ul>
-	</nav>
+<!--<body ng-app="sampleApp" ng-controller="MainController">-->
+<!--<div class="container">-->
+	<!-- -->
+	<!--&lt;!&ndash; HEADER &ndash;&gt;-->
+	<!--<nav class="navbar navbar-inverse">-->
+		<!--<div class="navbar-header">-->
+			<!--<a class="navbar-brand" href="/">Stencil: Node and Angular</a>-->
+		<!--</div>-->
+		<!--<ul class="nav navbar-nav">-->
+			<!--<li><a href="/dash-plate">DashPlate</a></li>-->
+		<!--</ul>-->
+	<!--</nav>-->
+	<!--&lt;!&ndash; ANGULAR DYNAMIC CONTENT &ndash;&gt;-->
+	<!--<div ng-view></div>-->
 
-	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
+<!--</div>-->
+<!--</body>-->
 
+
+<body ng-app="sampleApp">
+<div class="container-fluid" id="main-container">
+    <div ng-controller="MainController" layout="column" style="height:auto;">
+        <div ng-view>
+        </div>
+    </div>
 </div>
 </body>
+
+
+
 </html>

@@ -1,5 +1,76 @@
-<div class="jumbotron text-center">
-	<h1>Home Page 4 Life</h1>
 
-	<p>{{ tagline }}</p>
-</div>
+<section layout="row" flex >
+
+	<md-content flex style="">
+		<md-toolbar layout="row" layout-align="start center" class="toolbar" style="background-color: white">
+
+            <div flex="10">
+                <img src="../images/dash-logo.png" style="max-width:50px; max-height:50px">
+
+            </div>
+
+            <div flex="50">
+
+            </div>
+
+            <div flex="10">
+                <a href="javascript:void(0)" class="toolbar-links"> home</a>
+            </div>
+
+            <div flex="10">
+                <a href="javascript:void(0)" class="toolbar-links"> blog</a>
+            </div>
+
+            <div flex="10">
+                <a href="javascript:void(0)" class="toolbar-links"> about</a>
+            </div>
+
+            <div flex="10">
+                <a href="javascript:void(0)" class="toolbar-links"> [plates]</a>
+            </div>
+
+		</md-toolbar>
+
+        <div layout="row" layout-align="center end">
+            <div style="width:30%; margin-top:100px">
+                <form layout="column" flex >
+                    <md-input-container>
+                        <label class="left-margin">Plate Number</label>
+                        <input name="numberPlate" type="text" ng-model="numberPlate" required>
+                    </md-input-container>
+
+                    <md-input-container>
+                        <label>Emirate</label>
+                        <input name="emirate" type="text" ng-model="emirate" required>
+                    </md-input-container>
+
+                    <md-input-container>
+                        <label>Email</label>
+                        <input name="email" type="text" ng-model="email" required>
+                    </md-input-container>
+
+                    <div layout="row" layout-align="end end">
+                        <div flex="33">
+                            <md-button class="md-raised md-primary" style="background-color:#ffed3e" ng-click="submitDetails()">Price It</md-button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+	</md-content>
+</section>
+
+<style>
+    body{
+        background:url('../images/dashplate-bg.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+

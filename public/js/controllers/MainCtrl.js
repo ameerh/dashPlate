@@ -1,5 +1,8 @@
-angular.module('MainCtrl', []).controller('MainController', function($scope) {
+angular.module('MainCtrl', ['ngMaterial']).controller('MainController', function($scope, $location) {
 
-	$scope.tagline = 'To the moon and back!';	
+
+	$scope.submitDetails = function(){
+		$location.path('/dashplate');
+	}
 
 });

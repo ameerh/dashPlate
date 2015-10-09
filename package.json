@@ -1,11 +1,30 @@
 {
-  "name": "starter-node-angular",
+  "name": "dash-plate",
   "main": "server.js",
   "dependencies": {
-    "express" : "~4.5.1",
-	"mongoose" : "~3.8.0",
-	"body-parser" : "~1.4.2",
-	"method-override" : "~2.0.2"
+    "async": "^1.4.2",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.4.2",
+    "bower": "^1.4.1",
+    "connect-multiparty": "^1.2.5",
+    "cookie-parser": "~1.0.0",
+    "couchbase": "^2.0.8",
+    "excel": "0.1.4",
+    "express": "~4.5.1",
+    "express-session": "latest",
+    "formidable": "^1.0.17",
+    "method-override": "~2.0.2",
+    "multer": "^0.1.8",
+    "nconf": "0.6.9",
+    "node-couchbase": "^0.1.4-alpha",
+    "passport": "latest",
+    "passport-local": "latest",
+    "request": "2.44.0",
+    "underscore": "^1.8.3",
+    "uuid": "^2.0.1",
+    "restler": "^3.3.0",
+    "winston": "0.7.2",
+    "xlsx": "0.8.0",
+    "fast-csv" : "0.6.0"
   }
 }
-
