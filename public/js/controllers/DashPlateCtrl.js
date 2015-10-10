@@ -25,7 +25,7 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
             },
 			yAxis: {
 				title: {
-					text: 'Price',
+					text: 'AED Price',
 					useHTML: true,
 					style: {
 						"-webkit-transform": "rotate(90deg)",
@@ -34,6 +34,9 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
 					}
 				}
 			},
+            tooltip: {
+                valuePrefix: 'AED '
+            },
 			series: [{
                 name: 'Last 6 months',
 				data: $rootScope.plateData.timelineValues,
