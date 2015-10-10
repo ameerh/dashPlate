@@ -5,7 +5,9 @@
         <md-toolbar layout="row" layout-align="start center" class="toolbar" style="background-color: white; border-bottom: 1px solid rgba(105,105,105,0.17);">
 
             <div flex="10">
-                <img src="../images/dash-logo.png" style="max-width:50px; max-height:50px">
+                <a href="/">
+                    <img src="../images/dash-logo.png" style="max-width:50px; max-height:50px">
+                </a>
 
             </div>
 
@@ -14,29 +16,32 @@
             </div>
 
             <div flex="10">
-                <a href="/" class="toolbar-links"> home</a>
+                <a href="https://www.dashroad.com" target="_blank" class="toolbar-links"> home</a>
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> blog</a>
+                <a href="https://www.dashroad.com/blog" target="_blank" class="toolbar-links"> blog</a>
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> about</a>
+                <a href="https://www.dashroad.com/about" target="_blank" class="toolbar-links"> about</a>
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> [plates]</a>
+                <a href="https://www.dashroad.com/plates" target="_blank" class="toolbar-links"> [plates]</a>
             </div>
         </md-toolbar>
 
 
         <div layout="row" layout-sm="column" layout-align="start center" style="margin-left: 100px; margin-top:70px; margin-bottom:40px">
             <div flex="10" >
-                A2500
+                <md-button class="md-raised">Plate: {{inputObj.numberPlate}} </md-button>
             </div>
             <div flex="10">
-                Dubai
+                <md-button class="md-raised">Emirate: {{inputObj.emirate}}</md-button>
+            </div>
+            <div flex="10" style=" margin-left: 35px; ">
+                <md-button class="md-raised md-primary">AED {{plateData.calculatedValue}}</md-button>
             </div>
         </div>
 

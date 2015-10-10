@@ -1,4 +1,4 @@
-angular.module('DashPlateCtrl', []).controller('DashPlateController', function($scope , $mdDialog ) {
+angular.module('DashPlateCtrl', []).controller('DashPlateController', function($scope, $rootScope , $mdDialog ) {
 
 
 
@@ -6,12 +6,23 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
 	$(function() {
 		var chart = new Highcharts.Chart({
 			title:{
-				text:''
+				text:'timeline'
 			},
 			chart: {
 				renderTo: 'container',
 				type: 'column'
 			},
+			xAxis: {
+                categories: [
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct'
+                ],
+                crosshair: true,
+            },
 			yAxis: {
 				title: {
 					text: 'Price',
@@ -24,7 +35,8 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
 				}
 			},
 			series: [{
-				data: [23,45,12,89,123,12,5],
+                name: 'Last 6 months',
+				data: $rootScope.plateData.timelineValues,
                 color: "#C57322"
 			}]
 
@@ -85,8 +97,6 @@ angular.module('DashPlateCtrl', []).controller('DashPlateController', function($
 });
 
 function confirmationController($scope, type, $mdDialog){
-
-
 	$scope.type = type;
 	console.log(type)
 	$scope.close = function() {

@@ -5,7 +5,9 @@
 		<md-toolbar layout="row" layout-align="start center" class="toolbar" style="background-color: white">
 
             <div flex="10">
-                <img src="../images/dash-logo.png" style="max-width:50px; max-height:50px">
+                <a href="/">
+                    <img src="../images/dash-logo.png" style="max-width:50px; max-height:50px">
+                </a>
 
             </div>
 
@@ -14,34 +16,34 @@
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> home</a>
+                <a href="https://www.dashroad.com" target="_blank" class="toolbar-links"> home</a>
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> blog</a>
+                <a href="https://www.dashroad.com/blog" target="_blank" class="toolbar-links"> blog</a>
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> about</a>
+                <a href="https://www.dashroad.com/about" target="_blank" class="toolbar-links"> about</a>
             </div>
 
             <div flex="10">
-                <a href="javascript:void(0)" class="toolbar-links"> [plates]</a>
+                <a href="https://www.dashroad.com/plates" target="_blank" class="toolbar-links"> [plates]</a>
             </div>
 
 		</md-toolbar>
 
-        <div layout="row" layout-align="center end" layout-fill>
+        <div layout="row" layout-align="left end" layout-fill>
             <img src="../images/dashplate-bg.png" class="bg" alt="image you want in background">
-            <div style="width:30%; margin-top:100px" style="background-color:white !important;">
+            <div style="width:30%; margin:20px 0 0 40px; background-color:white !important;">
                 <form name="form" layout="column" flex>
                     <md-input-container>
                         <label class="left-margin">Plate Number</label>
-                        <input name="numberPlate" type="text" ng-model="numberPlate" required>
+                        <input name="numberPlate" type="number" ng-model="numberPlate" required>
                     </md-input-container>
 
                     <md-input-container>
-                        <md-select ng-model="emirate" placeholder="State" required>
+                        <md-select ng-model="emirate" placeholder="Emirate" required>
                             <md-option value="Dubai">Dubai</md-option>
                         </md-select>
                     </md-input-container>
@@ -96,7 +98,7 @@
 
         /* Set up positioning */
         position: fixed;
-        top: 0;
+        top: -140px;
         left: 0;
     }
 </style>

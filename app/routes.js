@@ -7,9 +7,19 @@ module.exports = function(app) {
 	// authentication routes
 
 
-	app.get('/dash-plate-api', function(req, res) {
-		rest.get("http://google.com")
+	app.post('/dash-plate-api', function(req, res) {
+		rest.get("http://192.241.196.20:8080/plates/"+parseInt(req.body.numberPlate))
 			.on('complete', function(data) {
+                //Random data for chart
+                value = data.calculatedValue;
+                half_value = parseInt(value) / 2;
+                timelineValues = [];
+                for(var i =0; i < 5; i++){
+                    timelineValues.push(randomInt(half_value, value));
+                }
+                timelineValues.push(parseInt(value));
+                data.timelineValues = timelineValues;
+                //Random data for chart
 				res.send(data)
 		})
 			.on('error', function(err, response){
@@ -24,4 +34,7 @@ module.exports = function(app) {
 		res.sendfile('./public/index.html');
 	});
 
+    function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
 };
